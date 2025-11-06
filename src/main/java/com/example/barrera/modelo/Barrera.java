@@ -8,7 +8,6 @@ import java.util.Iterator;
 import com.example.barrera.modelo.observador.Observable;
 
 public class Barrera extends Observable{
-   //private ArrayList<EscuchadorBarrera> escuchadores = new ArrayList();
    private boolean arriba = false;
 
    public static enum Eventos {
@@ -34,24 +33,6 @@ public class Barrera extends Observable{
    }
 
    */
-
-   public void subir() {
-      System.out.println("SUBIR BARRERA-->>");
-      if (!this.arriba) {
-         this.arriba = true;
-         //this.avisar();
-      }
-
-   }
-
-   public void bajar() {
-      System.out.println("<<--------------------------------BAJAR BARRERA");
-      if (this.arriba) {
-         this.arriba = false;
-         //this.avisar();
-      }
-
-   }
 
    public void on(){
         System.out.println("----ON---");
@@ -88,19 +69,4 @@ public class Barrera extends Observable{
         avisar(Eventos.bajoBarrera);
     }
 
-   /*
-   private void avisar() {
-      Iterator var1 = this.escuchadores.iterator();
-
-      while(var1.hasNext()) {
-         EscuchadorBarrera eb = (EscuchadorBarrera)var1.next();
-         if (this.arriba) {
-            eb.subioBarrera();
-         } else {
-            eb.bajoBarrera();
-         }
-      }
-
-   }
-   */
 }
