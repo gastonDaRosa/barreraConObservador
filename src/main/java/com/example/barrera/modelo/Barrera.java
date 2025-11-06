@@ -2,9 +2,6 @@ package com.example.barrera.modelo;
 
 
 
-import java.util.ArrayList;
-import java.util.Iterator;
-
 import com.example.barrera.modelo.observador.Observable;
 
 public class Barrera extends Observable{
@@ -19,28 +16,16 @@ public class Barrera extends Observable{
    public Barrera() {
    }
 
-   /*
-
-   public void agregarEscuchador(EscuchadorBarrera eb) {
-      if (!this.escuchadores.contains(eb)) {
-         this.escuchadores.add(eb);
-      }
-
-   }
-
-   public void quitarEscuchador(EscuchadorBarrera eb) {
-      this.escuchadores.remove(eb);
-   }
-
-   */
 
    public void on(){
         System.out.println("----ON---");
         System.out.println();
+        System.out.println("----SUBIO Barrera---");
         pausa(3);
         detectarMovimiento();
         
         System.out.println();
+        System.out.println("----BAJO Barrera---");
         pausa(10);
         detectarReposo();
 
